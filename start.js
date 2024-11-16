@@ -166,5 +166,5 @@ function showResult(){
   document.querySelector(".resultPage span").innerHTML = `
  Your Score: ${score} / ${questions.length}
   `;
-  document.querySelector(".resultPage .rate").innerHTML = percent + "% Score";
+  document.querySelector(".resultPage .rate").innerHTML = percent.toFixed() + "% Score";
 }
