@@ -1,0 +1,263 @@
+
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  color:white;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  min-height: 100vh;
+}
+.container{
+  position: relative;
+  width:100%;
+  text-align: center;
+  overflow-x: hidden;
+  background: purple;
+  box-shadow: 2px 2px 10px whitesmoke,
+          -2px -2px 10px whitesmoke;
+  max-width: 500px;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.welcome{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+.welcome p{
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 450;
+}
+.welcome h2{
+  font-size: 19px;
+  font-size: clamp(19px, 20vw,30px);
+}
+.welcome a{
+  margin-top: 30px;
+}
+.start{
+  background: green;
+  color: white;
+  padding: 20px 50px;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.container .head{
+  margin-bottom:30px;
+}
+.container .head h2{
+  font-size: 40px;
+}
+.formPage{
+  display: block;
+}
+.formPage .form{
+  text-align: left;
+}
+.formPage .form label{
+  font-weight: 600;
+  font-size: 20px;
+}
+select,
+input[type="number"]{
+  width: 100%;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: 550;
+  margin:10px 0;
+  border-radius:10px;
+}
+input[type="number"]{
+  border: none;
+}
+button{
+  border-radius: 10px;
+  border:none;
+box-shadow: 2px 2px 10px grey,
+          -2px -2px 10px grey;
+}
+button:hover{
+  opacity:0.8;
+}
+.formPage .continue{
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  color: white;
+  background: green;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  
+}
+.show{
+  display: block;
+}
+.quizPage{
+  display: none;
+  width:100%;
+  overflow: hidden;
+}
+.quizPage .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.quizPage .header .topic h2{
+  align-self: center;
+  font-size: 18px;
+  font-size: clamp(18px, 20vw,25px);
+}
+.timer{
+  background: red;
+  padding: 5px;
+}
+.timer span{
+  font-size:20px;
+  font-weight: 550;
+}
+.quizPage .questions{
+  margin-top:30px;
+  text-align: left;
+  /*display: flex;*/
+  width: 100%;
+}
+option{
+  color: black;
+}
+.quizPage .questions h1{
+  font-size: 18px;
+  font-size: clamp(18px, 20vw, 20px);
+}
+.answerwrapper{
+  margin-top:20px;
+}
+.answerwrapper > .answer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 4px solid grey;
+  /* background: lightgreen; */
+  margin-top: 20px;
+}
+.answerwrapper .answer .title{
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+.questions .row{
+  width: 100%;
+  margin:30px 0;
+}
+.mark{
+  color: transparent;
+  background:transparent;
+  border:2px solid grey;
+  padding: 2px 5px;
+  border-radius:50%;
+  transition:.3s;
+}
+.questions .row .answer:hover:not(.checked) .mark,
+.questions .row .answer.selected .mark{
+  color:white;
+  background: blue;
+}
+.answer.correct{
+  border-color:  rgb(77, 200, 77);
+}
+.answer.wrong{
+  border-color: red;
+}
+.answer.checked .mark{
+  color: transparent;
+  background: transparent;
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+.quizPage .btns button{
+  width:80%;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  box-shadow: none;
+  background: green;
+  margin-top: 20px;
+  float: right;
+}
+.btns .submit:disabled{
+  background-color: gray;
+}
+.btns button.next{
+  display: none;
+}
+.pages span{
+  font-size: 20px;
+  font-weight: 600;
+}
+.resultPage{
+  display: none;
+}
+.resultPage h1{
+  font-size: 30px;
+margin-top:20px;
+}
+.resultPage h2{
+  font-size: 40px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.resultPage p{
+  font-size: 20px;
+  padding-top: 50px;
+}
+.resultPage span {
+  font-size: 30px;
+  font-weight:600;
+  padding-top: 50px;
+}
+.resultPage img{
+  width: 50%;
+}
+.resultPage .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.buttons button{
+  padding:10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow:none;
+  color: black;
+}
+.buttons button:nth-child(2){
+  background: blue;
+  color: white;
+}
+@media screen and (max-width:400px){
+  .container{
+    border-radius: 1px;
+  }
+}

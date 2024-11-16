@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ajala John">
+  <meta name="description" content="A quiz website designed to test thinking abilities and increase knowledge level">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./quiz.css">
+  <title>QuizHub</title>
+</head>
+<body>
+  <main class="container">
+     <div class="head">
+    <h2>QuizHub</h2>
+  </div>
+<div class="formPage">
+
+  <div class="form">
+    <label for="noQue">Number of Questions</label>
+      <input type="number" required name="num" id="num" placeholder="Value must not exceed 50" max="50" title="Value must be less than or equal to 50">
+      <span class="error" style="display:none; color:red;text-align:center;">Value must be less than or equal to 50</span>
+      <br>
+      <label for="category">Select Category</label>
+      <select name="category" required id="category">
+             <option value="9">General Knowledge</option>
+             <option value="10">Entertainment: Books</option>
+             <option value="11">Entertainment: Film</option>
+             <option value="12">Entertainment: Music</option>
+             <option value="13">Entertainment: Musicals & Theatres</option>
+             <option value="14">Entertainment: Television</option>
+             <option value="15">Entertainment: Video Games</option>
+             <option value="16">Entertainment: Board Games</option>
+             <option value="17">Science & Nature</option>
+             <option value="18">Science: Computers</option>
+             <option value="19">Science: Mathematics</option>
+             <option value="20">Mythology</option>
+             <option value="21">Sports</option>
+             <option value="22">Geography</option>
+             <option value="23">History</option>
+             <option value="24">Politics</option>
+             <option value="25">Art</option>
+             <option value="26">Celebrities</option>
+             <option value="27">Animals</option>
+             <option value="28">Vehicles</option>
+             <option value="29">Entertainment: Comics</option>
+             <option value="30">Science: Gadgets</option>
+             <option value="31">Entertainment: Japanese Anime & Manga</option>
+             <option value="32">Entertainment: Cartoon & Animations</option>
+           </select>
+   <label for="level">Select Difficulty level</label>
+      <select name="level" required id="level">
+            <option value="">Any Difficulty</option>
+             <option value="easy">Easy</option>
+             <option value="medium">Medium</option>
+             <option value="hard">Hard</option>
+             
+           </select>
+    <label for="time">Select Time Per Question</label>
+     <input type="number" id="time" placeholder="Enter time in seconds (4 - 30)" required="true" min="4" max="30">
+      <span class="error1" style="display:none; color:red;text-align:center;">Value must be less than or equal to 30</span>
+  </div>
+  <button class="continue" onclick="getQuis()">Start Quiz</button>
+</div>
+
+<div class="quizPage">
+  <div class="header">
+    <div class="topic">
+      <h2>Biology</h2>
+      </div>
+    <div class="timer">
+      <span class="sec">Time: 60</span>
+    </div>
+  </div>
+  
+  <div class="questions">
+     <div class="row">
+      <h1>1) What is the capital of Nigeria?</h1>
+      
+      <div class="answerwrapper">
+       <!--<div class="answer selected correct">
+          <span class="title">Lagos</span>
+          <span class="mark">✓</span>
+        </div>
+          <div class="answer wrong">
+          <span class="title">Lagos</span>
+          <span class="mark">✓</span>
+        </div>
+  <div class="answer">
+          <span class="title">Lagos</span>
+          <span class="mark">✓</span>
+        </div>-->
+      </div>
+      </div> 
+  
+      </div>
+      <div class="pages">
+       <span class="current">Question 1</span>
+        <span>/</span>
+        <span class="total">12</span>
+      </div>
+      <div class="btns">
+      <button type="submit" class="submit" disabled="true">Submit</button>
+      <button class="next">Next</button>
+      </div>
+      
+    </div>
+
+<div class="resultPage">
+     <img src="trophy-uno.gif" alt="congrats">
+      <h1>Congratulations</h1>
+       <h2 class="rate">90% score</h2>
+       <span>Your Score: ${score} / ${questions.length}</span>
+     
+      <div class="buttons">
+        <button onclick="show()">Quit</button>
+        <button onclick="restat()">Restart</button>
+      </div>
+
+  </div>
+  
+</div>
+
+  </main>
+  <script src="./start.js"></script>
+<script>
+function show(){
+  open("index.html");
+}
+  function restat(){
+    location.reload();
+  }
+</script>
+</body>
+
+</html>
